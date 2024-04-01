@@ -18,60 +18,71 @@ const membros = [
   {
     nome: "Jenyffer Mery",
     matricula: "01599642",
-    foto: jenny
+    foto: jenny,
+    funcao: "HTML E CSS"
   },
   {
     nome: "Hítallo Freitas",
     matricula: "01620638",
-    foto: hitallo
+    foto: hitallo,
+    funcao: "Revisor"
   },
   {
     nome: "Márlya Monique",
     matricula: "01597623",
-    foto: ma
+    foto:  ma,
+    funcao: "HTML E CSS"
   },
   {
     nome: "Matheus Lemos",
     matricula: "01608078",
-    foto: theu
+    foto: theu,
+    funcao: "HTML E CSS"
   },
   {
     nome: "Bruno Soares",
     sobrenome: "da Silva",
     matricula: "11000133",
-    foto: "src_do_bruno_soares"
+    foto: "src_do_bruno_soares",
+    funcao: "Textos"
   },
   {
     nome: "Gabriel do Vale",
     sobrenome: "Alcoforado Braga",
     matricula: "24009962",
-    foto: "src_do_gabriel_do_vale"
+    foto: "src_do_gabriel_do_vale",
+    funcao: "Textos"
   },
   {
     nome: "Guilherme Pietro",
     sobrenome: "Luna Diniz",
     matricula: "01576841",
-    foto: "src_do_guilherme_pietro"
+    foto: "src_do_guilherme_pietro",
+    funcao: "Textos"
   },
   {
     nome: "Luiz Vinicius",
     sobrenome: "Lima da Silva",
     matricula: "01603161",
-    foto: "src_do_luiz_vinicius"
+    foto: "src_do_luiz_vinicius",
+    funcao: "Textos"
   },
   {
     nome: "Pedro Dutra de Albuquerque",
     sobrenome: "Macedo",
     matricula: "01602996",
-    foto: "src_do_pedro_dutra"
+    foto: "src_do_pedro_dutra",
+    funcao: "Elaboracao"
   },
   {
     nome: "Ronaldo de Souza Paixão",
     sobrenome: "Junior",
     matricula: "01604034",
-    foto: "src_do_ronaldo_de_souza"
+    foto: "src_do_ronaldo_de_souza",
+    funcao: "Organização"
   }
 ];
+
 
 
 
@@ -119,14 +130,12 @@ function About() {
             {CulturaVivatxt}
             </p>
           </div>
-          {/* Outros tópicos omitidos por brevidade */}
         </div>
       </div>
       <h2 className="tw-text-xl tw-font-bold tw-mt-8">Equipe:</h2>
       <div className="tw-grid tw-grid-cols-2 md:tw-grid-cols-5 tw-gap-4 tw-mt-4">
   {membros.map((membro, index) => (
     <div key={index} className="tw-bg-white tw-shadow-md tw-rounded-lg tw-p-4 tw-w-40rem tw-flex tw-flex-col tw-items-center">
-      {/* Verifica se a foto é uma URL ou uma importação */}
       {typeof membro.foto === 'string' ? (
         <img src={membro.foto} alt={`Foto de ${membro.nome}`} className="tw-rounded-full tw-w-24 tw-h-24 tw-mb-2" />
       ) : (
@@ -135,6 +144,7 @@ function About() {
       <div className="tw-text-center">
         <p className="tw-font-semibold">{membro.nome}</p>
         <p className="tw-text-sm tw-text-gray-600">Matrícula: {membro.matricula}</p>
+        <p className="tw-text-sm tw-text-gray-600">Função: {membro.funcao}</p>
       </div>
     </div>
   ))}
