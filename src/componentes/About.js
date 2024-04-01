@@ -51,7 +51,7 @@ const membros = [
     sobrenome: "Alcoforado Braga",
     matricula: "24009962",
     foto: "src_do_gabriel_do_vale",
-    funcao: "Textos"
+    funcao: "HTML e CSS"
   },
   {
     nome: "Guilherme Pietro",
@@ -68,18 +68,18 @@ const membros = [
     funcao: "Textos"
   },
   {
-    nome: "Pedro Dutra de Albuquerque",
+    nome: "Pedro Albuquerque",
     sobrenome: "Macedo",
     matricula: "01602996",
     foto: "src_do_pedro_dutra",
-    funcao: "Elaboracao"
+    funcao: "tradução"
   },
   {
     nome: "Ronaldo de Souza Paixão",
     sobrenome: "Junior",
     matricula: "01604034",
     foto: "src_do_ronaldo_de_souza",
-    funcao: "Organização"
+    funcao: "tradução"
   }
 ];
 
