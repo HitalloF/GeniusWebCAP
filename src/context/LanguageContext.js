@@ -13,7 +13,6 @@ export const LanguageProvider = ({ children }) => {
   const location = useLocation();
 
   useEffect(() => {
-    // Ocultar o botão de idioma na página de login
     setShowLanguageButton(location.pathname !== '/login');
   }, [location]);
 

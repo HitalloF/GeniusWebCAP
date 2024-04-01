@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useI18n } from '../context/I18nContext';
 
-// Importação dos arquivos de mensagens
 import messages_en from './locales/en/translation.json';
 import messages_pt from './locales/pt/translation.json';
 

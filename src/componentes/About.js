@@ -25,7 +25,7 @@ const membros = [
     nome: "Hítallo Freitas",
     matricula: "01620638",
     foto: hitallo,
-    funcao: "Revisor"
+    funcao: "Revisor e JS"
   },
   {
     nome: "Márlya Monique",
