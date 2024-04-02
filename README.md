@@ -13,7 +13,7 @@ Ronaldo de Souza Paixão Junior -> 01604034<br/>
 
   # Recife Vivo
 
-Bem-vindo ao Recife Vivo, um projeto desenvolvido pela Genius Web Gênios da Web. Nosso projeto visa criar uma interface interativa para explorar a beleza e a cultura de Recife, proporcionando aos usuários uma experiência imersiva através de tecnologias de ponta.
+Bem-vindo ao Recife Vivo, um projeto desenvolvido pela Genius da Web. Nosso projeto visa criar uma interface interativa para explorar a beleza e a cultura de Recife, proporcionando aos usuários uma experiência imersiva através de tecnologias de ponta.
 
 ## Tecnologias Utilizadas
 
