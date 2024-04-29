@@ -13,3 +13,8 @@ html, body, #root {
   padding: 0;
   box-sizing: border-box;
 }
+@media (max-width: 399px) {
+  .tw-bg-black-400px {
+    background-color: #d1d5db; 
+  }
+}
