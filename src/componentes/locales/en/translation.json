@@ -18,5 +18,8 @@
   "Contact": "Contact",
   "Logout": "Logout",
   "EventTitlePrefix": "Event",
-  "EventDescriptionPrefix": "Description of Event"
-}
+  "EventDescriptionPrefix": "Description of Event",
+  "Equipe":"Team",
+  "register":"Don't have an account? Register",
+  "footer":"Recife Vivo is an initiative aimed at fostering culture in Recife."
+} 

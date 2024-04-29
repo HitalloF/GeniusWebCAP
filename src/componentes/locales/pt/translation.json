@@ -19,6 +19,8 @@
   "Contact": "Contato",
   "Logout": "Sair",
   "EventTitlePrefix": "Evento",
-  "EventDescriptionPrefix": "Descrição do Evento"
-
+  "EventDescriptionPrefix": "Descrição do Evento",
+  "Equipe":"Equipe",
+  "register":"Não tem uma conta? Cadastre-se",
+  "footer":"Recife Vivo é uma iniciativa que busca incentivar a cultura em Recife."
 }

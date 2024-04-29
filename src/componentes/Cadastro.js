@@ -1,15 +1,39 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
 function Cadastro() {
   const [usuario, setUsuario] = useState('');
   const [senha, setSenha] = useState('');
+  const [confirmSenha, setConfirmSenha] = useState('');
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Dados de Cadastro:", usuario, senha);
-    navigate('/login');
+
+    if (senha !== confirmSenha) {
+      alert('As senhas não coincidem!');
+      return;
+    }
+
+    const loginData = {
+      email: usuario,
+      senha: senha
+    };
+
+    try {
+      const response = await axios.post('http://localhost:3001/register', loginData);
+      if (response && response.data) {
+        console.log('registro successful:', response.data);
+        console.log(loginData, response.data)
+        navigate('/login');
+      } else {
+        throw new Error('Resposta sem dados');
+      }
+    } catch (error) {
+      console.error('registro failed:', error.response ? error.response.data : 'Sem detalhes do erro');
+      alert('Falha no registro: ' + (error.response ? error.response.data : 'Verifique suas credenciais'));
+    }
   };
 
   return (
@@ -37,6 +61,18 @@ function Cadastro() {
             id="senha"
             value={senha}
             onChange={(e) => setSenha(e.target.value)}
+            className="tw-shadow tw-appearance-none tw-border tw-rounded tw-w-full tw-py-2 tw-px-3 tw-text-gray-700 tw-leading-tight tw-focus:outline-none tw-focus:shadow-outline"
+          />
+        </div>
+        <div className="tw-mb-6">
+          <label htmlFor="confirmSenha" className="tw-block tw-text-gray-700 tw-text-sm tw-font-bold tw-mb-2">
+            Confirme a Senha:
+          </label>
+          <input
+            type="password"
+            id="confirmSenha"
+            value={confirmSenha}
+            onChange={(e) => setConfirmSenha(e.target.value)}
             className="tw-shadow tw-appearance-none tw-border tw-rounded tw-w-full tw-py-2 tw-px-3 tw-text-gray-700 tw-leading-tight tw-focus:outline-none tw-focus:shadow-outline"
           />
         </div>
