@@ -6,20 +6,22 @@ import About from './componentes/About';
 import Home from './componentes/Home';
 import Equipe from './componentes/Equipe';
 import ContactPage from './componentes/Contact';
-
-
+import Users from './componentes/Users'
+import Pokemon from './componentes/Pokemon'
 
 function App() {
   return (
- <Router>
+    <Router>
       <div>
-       <Routes>
+        <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/cadastro" element={<Cadastro />} />
           <Route path="/home" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/equipe" element={<Equipe />} />
-          <Route path="/contact" element={<ContactPage/>} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/users" element={<Users />} />
+          <Route path="/Pokemon" element={<Pokemon />} />
           <Route path="/" element={<Login />} />
         </Routes>
       </div>

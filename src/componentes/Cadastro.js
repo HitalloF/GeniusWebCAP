@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import bgImage from '../img/bgc.jpg'; // Certifique-se de que o caminho está correto
+import bgImage from '../img/bgc.jpg';
 
 function Cadastro() {
   const [usuario, setUsuario] = useState('');
@@ -25,14 +25,14 @@ function Cadastro() {
     try {
       const response = await axios.post('http://localhost:3001/register', loginData);
       if (response && response.data) {
-        console.log('registro successful:', response.data);
-        console.log(loginData, response.data)
+        console.log('Registro successful:', response.data);
+        console.log('aa')
         navigate('/login');
       } else {
         throw new Error('Resposta sem dados');
       }
     } catch (error) {
-      console.error('registro failed:', error.response ? error.response.data : 'Sem detalhes do erro');
+      console.error('Registro failed:', error.response ? error.response.data : 'Sem detalhes do erro');
       alert('Falha no registro: ' + (error.response ? error.response.data : 'Verifique suas credenciais'));
     }
   };
